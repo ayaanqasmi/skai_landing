@@ -25,15 +25,15 @@ export function HeroSection() {
             link="#"
           />
           <ReleaseCard
-            title="AgensGraph-Extension Update"
+            title="Trusted Postgres Architect 23.37"
             date="April 15, 2025"
-            description="New extension features including advanced path finding algorithms and improved Cypher query support."
+            description="TPA 23.37 adds minor-version upgrades of Postgres in Patroni and EFM clusters and improved repmgr cluster upgrades."
             link="#"
           />
           <ReleaseCard
-            title="Node.js Driver v3.2.0"
+            title="EDB Postgres Enterprise Manager 10"
             date="April 5, 2025"
-            description="Updated Node.js driver with TypeScript improvements, connection pooling enhancements, and async iterator support."
+            description="PEM 10 is a major release that includes a modernized user interface, support for HA cluster grouping and server tagging, redesigned dashboards for real-time metrics, the latest pgAdmin enhancements, and advanced query analysis tools."
             link="#"
           />
         </div>
