@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SKAI Worldwide Documentation</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lucide-icons@latest/dist/umd/lucide.min.css">
+  <!-- Font declarations -->
+  <style>
+    @font-face {
+      font-family: 'Satoshi';
+      src: url('fonts/Satoshi-Regular.woff2') format('woff2');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Satoshi';
+      src: url('fonts/Satoshi-Medium.woff2') format('woff2');
+      font-weight: 500;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Satoshi';
+      src: url('fonts/Satoshi-Bold.woff2') format('woff2');
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Pretendard';
+      src: url('fonts/Pretendard-Regular.woff2') format('woff2');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Pretendard';
+      src: url('fonts/Pretendard-Medium.woff2') format('woff2');
+      font-weight: 500;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Pretendard';
+      src: url('fonts/Pretendard-Bold.woff2') format('woff2');
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Aptos Narrow';
+      src: url('fonts/AptosNarrow-Regular.woff2') format('woff2');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Aptos Narrow';
+      src: url('fonts/AptosNarrow-Medium.woff2') format('woff2');
+      font-weight: 500;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Aptos Narrow';
+      src: url('fonts/AptosNarrow-Bold.woff2') format('woff2');
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+  </style>
+</head>
+<body>
+  <div class="layout">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <div class="sidebar-logo">
+          <i class="lucide-database"></i>
+          <div>
+            <span class="sidebar-title">SKAI Worldwide</span>
+            <span class="sidebar-subtitle">Documentation</span>
+          </div>
+        </div>
+      </div>
+      <div class="sidebar-content">
+        <div class="sidebar-group">
+          <div class="sidebar-group-label">Navigation</div>
+          <div class="sidebar-group-content">
+            <ul class="sidebar-menu">
+              <li class="sidebar-menu-item">
+                <a href="#" class="sidebar-menu-button">
+                  <i class="lucide-home"></i>
+                  <span>Home</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="sidebar-group">
+          <div class="sidebar-group-label">RDBMS Family</div>
+          <div class="sidebar-group-content">
+            <ul class="sidebar-menu">
+              <li class="sidebar-menu-item">
+                <a href="#rdbms-family" class="sidebar-menu-button">
+                  <i class="lucide-cpu"></i>
+                  <span>EDB Postgres AI</span>
+                </a>
+              </li>
+              <li class="sidebar-menu-item">
+                <a href="#rdbms-family" class="sidebar-menu-button">
+                  <i class="lucide-database"></i>
+                  <span>Core Database Products</span>
+                </a>
+                <button class="sidebar-submenu-toggle" aria-label="Toggle submenu">
+                  <i class="lucide-chevron-down"></i>
+                </button>
+                <ul class="sidebar-submenu">
+                  <li class="sidebar-submenu-item">
+                    <a href="#core-database">Postgres Advanced Server</a>
+                  </li>
+                  <li class="sidebar-submenu-item">
+                    <a href="#core-database">Postgres Extended Server</a>
+                  </li>
+                  <li class="sidebar-submenu-item">
+                    <a href="#core-database">Postgres Distributed</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="sidebar-menu-item">
+                <a href="#rdbms-family" class="sidebar-menu-button">
+                  <i class="lucide-server"></i>
+                  <span>Platforms & Tools</span>
+                </a>
+                <button class="sidebar-submenu-toggle" aria-label="Toggle submenu">
+                  <i class="lucide-chevron-down"></i>
+                </button>
+                <ul class="sidebar-submenu">
+                  <li class="sidebar-submenu-item">
+                    <a href="#platforms-tools">Kubernetes</a>
+                  </li>
+                  <li class="sidebar-submenu-item">
+                    <a href="#platforms-tools">Management & Monitoring</a>
+                  </li>
+                  <li class="sidebar-submenu-item">
+                    <a href="#platforms-tools">Security</a>
+                  </li>
+                  <li class="sidebar-submenu-item">
+                    <a href="#platforms-tools">High Availability</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="sidebar-menu-item">
+                <a href="#rdbms-family" class="sidebar-menu-button">
+                  <i class="lucide-puzzle"></i>
+                  <span>Extensions & Connectors</span>
+                </a>
+              </li>
+              <li class="sidebar-menu-item">
+                <a href="#rdbms-family" class="sidebar-menu-button">
+                  <i class="lucide-move-right"></i>
+                  <span>Migration & Integration</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="sidebar-group">
+          <div class="sidebar-group-label">GDBMS Family</div>
+          <div class="sidebar-group-content">
+            <ul class="sidebar-menu">
+              <li class="sidebar-menu-item">
+                <a href="#gdbms-family" class="sidebar-menu-button">
+                  <i class="lucide-network"></i>
+                  <span>AgensGraph</span>
+                </a>
+              </li>
+              <li class="sidebar-menu-item">
+                <a href="#apache-age" class="sidebar-menu-button">
+                  <i class="lucide-git-branch"></i>
+                  <span>Apache AGE</span>
+                </a>
+              </li>
+              <li class="sidebar-menu-item">
+                <a href="#visualization" class="sidebar-menu-button">
+                  <i class="lucide-share-2"></i>
+                  <span>Visualization UIs</span>
+                </a>
+                <button class="sidebar-submenu-toggle" aria-label="Toggle submenu">
+                  <i class="lucide-chevron-down"></i>
+                </button>
+                <ul class="sidebar-submenu">
+                  <li class="sidebar-submenu-item">
+                    <a href="#agviewer">AGViewer</a>
+                  </li>
+                  <li class="sidebar-submenu-item">
+                    <a href="#agexplorer">AGExplorer</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="sidebar-group">
+          <div class="sidebar-group-label">Ecosystem</div>
+          <div class="sidebar-group-content">
+            <ul class="sidebar-menu">
+              <li class="sidebar-menu-item">
+                <a href="#ecosystem-tools" class="sidebar-menu-button">
+                  <i class="lucide-workflow"></i>
+                  <span>Tools & Extensions</span>
+                </a>
+              </li>
+              <li class="sidebar-menu-item">
+                <a href="#migration-data" class="sidebar-menu-button">
+                  <i class="lucide-share-2"></i>
+                  <span>Migration & Data</span>
+                </a>
+              </li>
+              <li class="sidebar-menu-item">
+                <a href="#developer-guides" class="sidebar-menu-button">
+                  <i class="lucide-settings"></i>
+                  <span>Developer Guides</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="sidebar-footer">
+        <div class="sidebar-footer-buttons">
+          <a href="https://github.com/skaiworldwide-oss" class="button button-outline">
+            <i class="lucide-github"></i>
+            <span>GitHub</span>
+          </a>
+          <a href="#" class="button button-outline">
+            <i class="lucide-life-buoy"></i>
+            <span>Support</span>
+          </a>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Header -->
+      <header class="header">
+        <div class="header-left">
+          <button id="sidebar-toggle" class="sidebar-toggle" aria-label="Toggle sidebar">
+            <i class="lucide-menu"></i>
+          </button>
+          <h1 class="header-title">SKAI Worldwide Docs</h1>
+        </div>
+        <div class="header-right">
+          <div class="search-container">
+            <button id="search-toggle" class="search-toggle">
+              <i class="lucide-search"></i>
+            </button>
+            <input type="search" id="search-input" class="search-input" placeholder="Search documentation...">
+          </div>
+          <div class="version-selector-container">
+            <button id="version-button" class="version-button">
+              <span id="selected-version">v2.15.0 (Latest)</span>
+              <i class="lucide-chevrons-up-down"></i>
+            </button>
+            <div id="version-dropdown" class="version-dropdown">
+              <div class="version-dropdown-search">
+                <input type="text" placeholder="Search version...">
+              </div>
+              <ul class="version-dropdown-list">
+                <li class="version-dropdown-item selected" data-value="v2.15.0">v2.15.0 (Latest)</li>
+                <li class="version-dropdown-item" data-value="v2.14.0">v2.14.0</li>
+                <li class="version-dropdown-item" data-value="v2.13.0">v2.13.0</li>
+                <li class="version-dropdown-item" data-value="v2.x">v2.x (Stable)</li>
+                <li class="version-dropdown-item" data-value="v1.x">v1.x (Legacy)</li>
+                <li class="version-dropdown-item" data-value="archive">Archive</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div class="container">
+        <!-- Hero Section -->
+        <section class="hero-section">
+          <div class="hero-content">
+            <h1 class="hero-title">SKAI Worldwide Database Documentation</h1>
+            <p class="hero-description">All the RDBMS, Graph-DBMS, tools, and guides you need—one unified hub.</p>
+          </div>
+
+          <div class="whats-new">
+            <h2 class="section-title">What's New</h2>
+            <div class="card-grid">
+              <!-- Release Card 1 -->
+              <div class="card">
+                <div class="card-header">
+                  <div class="card-date">
+                    <i class="lucide-calendar"></i>
+                    April 30, 2025
+                  </div>
+                  <h3 class="card-title">AgensGraph v2.15.0</h3>
+                </div>
+                <div class="card-content">
+                  <p class="card-description">Major release with improved query performance, enhanced graph algorithms, and better PostgreSQL 15 compatibility.</p>
+                </div>
+                <div class="card-footer">
+                  <a href="#" class="card-link">
+                    View Release Notes
+                    <i class="lucide-external-link"></i>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Release Card 2 -->
+              <div class="card">
+                <div class="card-header">
+                  <div class="card-date">
+                    <i class="lucide-calendar"></i>
+                    April 15, 2025
+                  </div>
+                  <h3 class="card-title">AgensGraph-Extension Update</h3>
+                </div>
+                <div class="card-content">
+                  <p class="card-description">New extension features including advanced path finding algorithms and improved Cypher query support.</p>
+                </div>
+                <div class="card-footer">
+                  <a href="#" class="card-link">
+                    View Release Notes
+                    <i class="lucide-external-link"></i>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Release Card 3 -->
+              <div class="card">
+                <div class="card-header">
+                  <div class="card-date">
+                    <i class="lucide-calendar"></i>
+                    April 5, 2025
+                  </div>
+                  <h3 class="card-title">Node.js Driver v3.2.0</h3>
+                </div>
+                <div class="card-content">
+                  <p class="card-description">Updated Node.js driver with TypeScript improvements, connection pooling enhancements, and async iterator support.</p>
+                </div>
+                <div class="card-footer">
+                  <a href="#" class="card-link">
+                    View Release Notes
+                    <i class="lucide-external-link"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- RDBMS Family Section -->
+        <section id="rdbms-family" class="section">
+          <div class="section-header">
+            <h2 class="section-title">RDBMS Family</h2>
+            <p class="section-description">Our comprehensive PostgreSQL-based database solutions and tools</p>
+          </div>
+
+          <!-- Featured Product -->
+          <div class="featured-product">
+            <div class="card featured">
+              <div class="card-header">
+                <div class="card-icon">
+                  <i class="lucide-cpu"></i>
+                </div>
+                <div>
+                  <h3 class="card-title">EDB Postgres AI</h3>
+                  <p class="card-tagline">AI-powered PostgreSQL database platform</p>
+                </div>
+              </div>
+              <div class="card-content">
+                <p class="card-description">Enhance your PostgreSQL databases with AI capabilities for intelligent query optimization, automated management, and advanced analytics.</p>
+              </div>
+              <div class="card-footer">
+                <a href="/docs/postgres-ai/overview" class="button button-outline">Overview</a>
+                <a href="/docs/postgres-ai/quick-start" class="button button-outline">Quick-Start</a>
+                <a href="/docs/postgres-ai/reference" class="button button-outline">Reference</a>
+                <a href="/docs/postgres-ai/release-notes" class="button button-outline">Release Notes</a>
+                <a href="https://github.com/skaiworldwide-oss/postgres-ai" class="button button-outline">GitHub</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Categories -->
+          <div class="product-categories">
+            <!-- Core Database Products -->
+            <div class="product-category">
+              <div class="product-category-header">
+                <div>
+                  <h3 class="product-category-title">Core Database Products</h3>
+                  <p class="product-category-description">Enterprise-ready PostgreSQL database solutions</p>
+                </div>
+                <button class="product-category-toggle">
+                  <i class="lucide-chevron-down"></i>
+                </button>
+              </div>
+              <div class="product-category-content">
+                <div class="product-card-grid">
+                  <!-- Product Card 1 -->
+                  <div class="product-card">
+                    <div class="product-card-header">
+                      <div class="product-card-icon">
+                        <i class="lucide-database"></i>
+                      </div>
+                      <h4 class="product-card-title">EDB Postgres Advanced Server</h4>
+                    </div>
+                    <div class="product-card-content">
+                      <p class="product-card-description">Enterprise-class PostgreSQL database with Oracle compatibility</p>
+                    </div>
+                    <div class="product-card-footer">
+                      <a href="/docs/postgres-advanced-server/overview" class="product-card-link">Overview</a>
+                      <span class="product-card-separator">•</span>
+                      <a href="/docs/postgres-advanced-server/quick-start" class="product-card-link">Quick-Start</a>
+                      <span class="product-card-separator">•</span>
+                      <a href="/docs/postgres-advanced-server/reference" class="product-card-link">Reference</a>
+                    </div>
+                  </div>
+
+                  <!-- Product Card 2 -->
+                  <div class="product-card">
+                    <div class="product-card-header">
+                      <div class="product-card-icon">
+                        <i class="lucide-database"></i>
+                      </div>
+                      <h4 class="product-card-title">EDB Postgres Extended Server</h4>
+                    </div>
+                    <div class="product-card-content">
+                      <p class="product-card-description">Extended PostgreSQL with additional enterprise features</p>
+                    </div>
+                    <div class="product-card-footer">
+                      <a href="/docs/postgres-extended-server/overview" class="product-card-link">Overview</a>
+                      <span class="product-card-separator">•</span>
+                      <a href="/docs/postgres-extended-server/quick-start" class="product-card-link">Quick-Start</a>
+                      <span class="product-card-separator">•</span>
+                      <a href="/docs/postgres-extended-server/reference" class="product-card-link">Reference</a>
+                    </div>
+                  </div>
+
+                  <!-- Product Card 3 -->
+                  <div class="product-card">
+                    <div class="product-card-header">
+                      <div class="product-card-icon">
+                        <i class="lucide-database"></i>
+                      </div>
+                      <h4 class="product-card-title">EDB Postgres Distributed (PGD)</h4>
+                    </div>
+                    <div class="product-card-content">
+                      <p class="product-card-description">Distributed PostgreSQL for high availability and scalability</p>
+                    </div>
+                    <div class="product-card-footer">
+                      <a href="/docs/postgres-distributed/overview" class="product-card-link">Overview</a>
+                      <span class="product-card-separator">•</span>
+                      <a href="/docs/postgres-distributed/quick-start" class="product-card-link">Quick-Start</a>
+                      <span class="product-card-separator">•</span>
+                      <a href="/docs/postgres-distributed/reference" class="product-card-link">Reference</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Platforms and Tools -->
+            <div class="product-category">
+              <div class="product-category-header">
+                <div>
+                  <h3 class="product-category-title">Platforms and Tools</h3>
+                  <p class="product-category-description">Kubernetes, management, monitoring, and security tools</p>
+                </div>
+                <button class="product-category-toggle">
+                  <i class="lucide-chevron-down"></i>
+                </button>
+              </div>
+              <div class="product-category-content">
+                <div class="product-card-grid">
+                  <!-- Product Card 1 -->
+                  <div class="product-card">
+                    <div class="product-card-header">
+                      <div class="product-card-icon">
+                        <i class="lucide-server"></i>
+                      </div>
+                      <h4 class="product-card-title">Kubernetes Solutions</h4>
+                    </div>
+                    <div class="product-card-content">
+                      <p class="product-card-description">Deploy and manage PostgreSQL on Kubernetes with CloudNativePG</p>
+                    </div>
+                    <div class="product-card-footer">
+                      <a href="/docs/kubernetes/overview" class="product-card-link">Overview</a>
+                      <span class="product-card-separator">•</span>
+                      <a href="/docs/kubernetes/quick-start" class="product-card-link">Quick-Start</a>
+                      <span class="product-card-separator">•</span>
+                      <a href="/docs/kubernetes/reference" class="product-card-link">Reference</a>
+                    </div>
+                  </div>
+
+                  <!-- Product Card 2 -->
+                  <div class="product-card">
+                    <div class="product-card-header">
+                      <div class="product-card-icon">
+                        <i class="lucide-shield"></i>
+                      </div>
+                      <h4 class="product-card-title">Security Tools</h4>
+                    </div>
+                    <div class="product-card-content">
+                      <p class="product-card-description">Transparent Data Encryption, LDAP Sync, and more</p>
+                    </div>
+                    <div class="product-card-footer">
+                      <a href="/docs/security/overview" class="product-card-link">Overview</a>
+                      <span class="product-card-separator">•</span>
+                      <a href="/docs/security/quick-start" class="product-card-link">Quick-Start</a>
+                      <span class="product-card-separator">•</span>
+                      <a href="/docs/security/reference" class="product-card-link">Reference</a>
+                    </div>
+                  </div>
+
+                  <!-- Product Card 3 -->
+                  <div class="product-card">
+                    <div class="product-card-header">
+                      <div class="product-card-icon">
+                        <i class="lucide-activity"></i>
+                      </div>
+                      <h4 class="product-card-title">High Availability</h4>
+                    </div>
+                    <div class="product-card-content">
+                      <p class="product-card-description">Replication, failover, and distributed solutions</p>
+                    </div>
+                    <div class="product-card-footer">
+                      <a href="/docs/high-availability/overview" class="product-card-link">Overview</a>
+                      <span class="product-card-separator">•</span>
+                      <a href="/docs/high-availability/quick-start" class="product-card-link">Quick-Start</a>
+                      <span class="product-card-separator">•</span>
+                      <a href="/docs/high-availability/reference" class="product-card-link">Reference</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- More product categories would go here -->
+          </div>
+
+          <!-- Product Explorer -->
+          <div class="product-explorer">
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">Product Explorer</h3>
+                <p class="card-description">Browse our complete catalog of RDBMS products and tools</p>
+              </div>
+              <div class="card-content">
+                <a href="/products" class="button">
+                  View All Products
+                  <i class="lucide-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- GDBMS Family Section -->
+        <section id="gdbms-family" class="section">
+          <div class="section-header">
+            <h2 class="section-title">GDBMS Family</h2>
+            <p class="section-description">Graph database management systems and visualization tools</p>
+          </div>
+
+          <div class="card-grid">
+            <!-- Product Card 1 -->
+            <div class="card">
+              <div class="card-header">
+                <div class="card-icon">
+                  <i class="lucide-git-branch"></i>
+                </div>
+                <div>
+                  <h3 class="card-title">AgensGraph</h3>
+                  <p class="card-tagline">Multi-model Graph-DBMS built on PostgreSQL</p>
+                </div>
+              </div>
+              <div class="card-content">
+                <p class="card-description">Leverage ACID transactions on graph and relational data in a single engine with Cypher and SQL query languages.</p>
+              </div>
+              <div class="card-footer">
+                <a href="/docs/agensgraph/overview" class="button button-outline">Overview</a>
+                <a href="/docs/agensgraph/quick-start" class="button button-outline">Quick-Start</a>
+                <a href="/docs/agensgraph/reference" class="button button-outline">Reference</a>
+                <a href="/docs/agensgraph/release-notes" class="button button-outline">Release Notes</a>
+                <a href="https://github.com/skaiworldwide-oss/agensgraph" class="button button-outline">GitHub</a>
+              </div>
+            </div>
+
+            <!-- Product Card 2 -->
+            <div class="card">
+              <div class="card-header">
+                <div class="card-icon">
+                  <i class="lucide-globe"></i>
+                </div>
+                <div>
+                  <h3 class="card-title">Apache AGE Extension</h3>
+                  <p class="card-tagline">PostgreSQL extension for graph data</p>
+                </div>
+              </div>
+              <div class="card-content">
+                <p class="card-description">Add graph database functionality to existing PostgreSQL databases with this Apache incubator project.</p>
+              </div>
+              <div class="card-footer">
+                <a href="/docs/apache-age/overview" class="button button-outline">Overview</a>
+                <a href="/docs/apache-age/quick-start" class="button button-outline">Quick-Start</a>
+                <a href="/docs/apache-age/reference" class="button button-outline">Reference</a>
+                <a href="/docs/apache-age/release-notes" class="button button-outline">Release Notes</a>
+                <a href="https://github.com/skaiworldwide-oss/AgensGraph-Extension" class="button button-outline">GitHub</a>
+              </div>
+            </div>
+
+            <!-- Product Card 3 -->
+            <div class="card">
+              <div class="card-header">
+                <div class="card-icon">
+                  <i class="lucide-share-2"></i>
+                </div>
+                <div>
+                  <h3 class="card-title">Visualization UIs</h3>
+                  <p class="card-tagline">Graph data visualization and exploration tools</p>
+                </div>
+              </div>
+              <div class="card-content">
+                <p class="card-description">AGViewer and AGExplorer provide intuitive interfaces for visualizing, querying, and exploring graph data stored in AgensGraph.</p>
+              </div>
+              <div class="card-footer">
+                <a href="/docs/visualization/overview" class="button button-outline">Overview</a>
+                <a href="/docs/visualization/quick-start" class="button button-outline">Quick-Start</a>
+                <a href="/docs/visualization/reference" class="button button-outline">Reference</a>
+                <a href="/docs/visualization/release-notes" class="button button-outline">Release Notes</a>
+                <a href="https://github.com/skaiworldwide-oss/AGViewer" class="button button-outline">GitHub</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+          <div class="footer-main">
+            <div class="footer-company">
+              <div class="footer-logo">
+                LOGO
+              </div>
+
+              <div class="footer-social">
+                <a href="https://linkedin.com" class="footer-social-link">
+                  <i class="lucide-linkedin"></i>
+                </a>
+                <a href="https://youtube.com" class="footer-social-link">
+                  <i class="lucide-youtube"></i>
+                </a>
+              </div>
+
+              <div class="footer-info">
+                <p class="footer-company-name">SKAI Worldwide</p>
+                <p>CEO: Dean Shin</p>
+                <p>Business registration number: 220-88-68408</p>
+                <p>Address: 516, Teheran-ro, Gangnam-gu, Seoul (06180)</p>
+                <p>Contact us: 070-4800-3517</p>
+                <a href="/privacy-policy" class="footer-privacy">Privacy Policy</a>
+              </div>
+            </div>
+
+            <div class="footer-nav">
+              <div class="footer-nav-column">
+                <h3 class="footer-nav-title">Company</h3>
+                <ul class="footer-nav-list">
+                  <li class="footer-nav-item">
+                    <a href="#" class="footer-nav-link">Intro</a>
+                  </li>
+                  <li class="footer-nav-item">
+                    <a href="#" class="footer-nav-link footer-nav-link-active">
+                      <span>Leadership</span>
+                      <span class="footer-nav-arrow">»</span>
+                    </a>
+                  </li>
+                </ul>
+                <h3 class="footer-nav-title footer-nav-title-secondary">Career</h3>
+              </div>
+
+              <div class="footer-nav-column">
+                <h3 class="footer-nav-title">Product</h3>
+                <ul class="footer-nav-list">
+                  <li class="footer-nav-item">
+                    <a href="#" class="footer-nav-link">AI</a>
+                  </li>
+                  <li class="footer-nav-item">
+                    <a href="#" class="footer-nav-link">DBMS</a>
+                  </li>
+                  <li class="footer-nav-item">
+                    <a href="#" class="footer-nav-link">Ontology</a>
+                  </li>
+                </ul>
+                <h3 class="footer-nav-title footer-nav-title-secondary">Family Site</h3>
+                <ul class="footer-nav-list">
+                  <li class="footer-nav-item">
+                    <a href="#" class="footer-nav-link">SKAI Intelligence</a>
+                  </li>
+                  <li class="footer-nav-item">
+                    <a href="#" class="footer-nav-link">Directors Company</a>
+                  </li>
+                  <li class="footer-nav-item">
+                    <a href="#" class="footer-nav-link">Creative Air</a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="footer-nav-column">
+                <h3 class="footer-nav-title">Service</h3>
+                <ul class="footer-nav-list">
+                  <li class="footer-nav-item">
+                    <a href="#" class="footer-nav-link">PGTS</a>
+                  </li>
+                  <li class="footer-nav-item">
+                    <a href="#" class="footer-nav-link">Education</a>
+                  </li>
+                  <li class="footer-nav-item">
+                    <a href="#" class="footer-nav-link">Tech Portal</a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="footer-nav-column">
+                <h3 class="footer-nav-title">Resource</h3>
+                <ul class="footer-nav-list">
+                  <li class="footer-nav-item">
+                    <a href="#" class="footer-nav-link">Manual</a>
+                  </li>
+                  <li class="footer-nav-item">
+                    <a href="#" class="footer-nav-link">White Paper</a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="footer-nav-column">
+                <h3 class="footer-nav-title">Newsroom</h3>
+                <ul class="footer-nav-list">
+                  <li class="footer-nav-item">
+                    <a href="#" class="footer-nav-link">Press Release</a>
+                  </li>
+                </ul>
+                <h3 class="footer-nav-title footer-nav-title-secondary">IR</h3>
+                <ul class="footer-nav-list">
+                  <li class="footer-nav-item">
+                    <a href="#" class="footer-nav-link">Report</a>
+                  </li>
+                  <li class="footer-nav-item">
+                    <a href="#" class="footer-nav-link">CI</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer-copyright">
+            <p>Copyright © 2025 SKAI Worldwide Co., Ltd. All Rights Reserved.</p>
+            <a href="https://www.skaiworldwide.com/en-US/about-us" class="footer-link">
+              https://www.skaiworldwide.com/en-US/about-us
+            </a>
+          </div>
+        </footer>
+      </div>
+    </main>
+  </div>
+
+  <!-- Back to top button -->
+  <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+    <i class="lucide-arrow-up"></i>
+  </button>
+
+  <script src="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
